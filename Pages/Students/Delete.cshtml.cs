@@ -38,12 +38,13 @@ namespace ContosoUniversity.Pages.Students
             {
                 return NotFound();
             }
-            return Page();
 
             if (saveChangesError.GetValueOrDefault())
             {
                 ErrorMessage = "Delete FAILED! Now try again peasant.";
             }
+
+            return Page();
         }
 
         public async Task<IActionResult> OnPostAsync(int? id)
